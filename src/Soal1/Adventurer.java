@@ -45,17 +45,17 @@ public class Adventurer {
 
     // Introduction Method
     public void Introduction(){
-        if(this.level > 10 && this.power > 100) {
+        if(this.level <= 10 || this.power <= 100) {
             System.out.println("Hi, My name is " + this.name +
-                    ". I'm a bronze rank adventurer.\n My current level is " + this.level +
+                    ". I'm a bronze rank adventurer.\nMy current level is " + this.level +
                     " and my total power is " + this.power);
-        } else if(this.level > 20 && this.power > 500) {
+        } else if(this.level <= 20 || this.power <= 500) {
             System.out.println("Hi, My name is " + this.name +
-                    ". I'm a silver rank adventurer.\n My current level is " + this.level +
+                    ". I'm a silver rank adventurer.\nMy current level is " + this.level +
                     " and my total power is " + this.power);
-        } else {
+        } else{
             System.out.println("Hi, My name is " + this.name +
-                    ". I'm a gold rank adventurer.\n My current level is " + this.level +
+                    ". I'm a gold rank adventurer.\nMy current level is " + this.level +
                     " and my total power is " + this.power);
         }
     }
@@ -70,7 +70,7 @@ public class Adventurer {
         if(power > this.power) {
             System.out.println(this.name + " has missed his/her attack!!!");
         } else{
-            System.out.println(this.name + " has dealt " + this.power + " dmg");
+            System.out.println(this.name + " has dealt " + power + " dmg");
         }
     }
 }
@@ -93,7 +93,7 @@ class Magician extends Adventurer{
     @Override
     public void Introduction() {
         System.out.println("Hi, My name is " + this.getName() +
-                ". I'm a magician.\n My current level is " + this.getLevel() +
+                ". I'm a magician.\nMy current level is " + this.getLevel() +
                 " and my total power is " + this.getPower());
     }
 }
