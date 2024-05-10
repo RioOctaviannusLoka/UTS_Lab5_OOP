@@ -82,11 +82,14 @@ class Magician extends Adventurer{
     public Magician(String name, int level, int power) {
         super(name, level, power);
     }
+
+    // Method overriding of attack method
     @Override
     public void attack(){
         System.out.println(this.getName() + " has dealt " + 10 * this.getPower() + " magic dmg");
     }
 
+    // Method Overriding of introduction method
     @Override
     public void Introduction() {
         System.out.println("Hi, My name is " + this.getName() +
