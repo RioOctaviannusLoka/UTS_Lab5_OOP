@@ -49,9 +49,15 @@ public class KecepatanGerakParabola {
         this.waktu = waktu;
     }
 
-    public float hitungKecepatanGerakParabola() {
-        float Vx = (float) (kecAwal * Math.cos(Math.toRadians(sudut)));
-        float Vy = (float) ((kecAwal * Math.sin(Math.toRadians(sudut))) - (gravitasi * waktu));
-        return (float) Math.sqrt(Vx*Vx + Vy * Vy);
+    public float hitungKecepatanSumbuX() {
+        return (float) (kecAwal * Math.cos(Math.toRadians(sudut)));
+    }
+
+    public float hitungKecepatanSumbuY() {
+        return (float) ((kecAwal * Math.sin(Math.toRadians(sudut))) - (gravitasi * waktu));
+    }
+
+    public float hitungKecepatanGerakParabola(){
+        return (float) Math.sqrt(Math.pow(hitungKecepatanSumbuX(), 2) + Math.pow(hitungKecepatanSumbuY(), 2));
     }
 }
