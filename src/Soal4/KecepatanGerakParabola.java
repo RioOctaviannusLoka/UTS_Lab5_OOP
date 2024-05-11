@@ -49,6 +49,22 @@ public class KecepatanGerakParabola {
         this.waktu = waktu;
     }
 
+    public float getKecAwal(){
+        return kecAwal;
+    }
+
+    public float getSudut(){
+        return sudut;
+    }
+
+    public float getGravitasi(){
+        return gravitasi;
+    }
+
+    public float getWaktu(){
+        return waktu;
+    }
+
     public float hitungKecepatanSumbuX() {
         return (float) (kecAwal * Math.cos(Math.toRadians(sudut)));
     }
