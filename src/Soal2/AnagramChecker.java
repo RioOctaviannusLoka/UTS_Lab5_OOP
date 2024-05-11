@@ -1,6 +1,7 @@
 package Soal2;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class AnagramChecker {
     private String kata;
@@ -28,11 +29,12 @@ public class AnagramChecker {
     }
 
     public static void main(String[] args) {
-        AnagramChecker tes1 = new AnagramChecker("Heart", "Earth");
-        AnagramChecker tes2 = new AnagramChecker("Tom Marvolo Riddle", "I am Lord Voldemort");
-        AnagramChecker tes3 = new AnagramChecker("Kekuatan", "Kekuaran");
-        System.out.println(tes1.isAnagram());
-        System.out.println(tes2.isAnagram());
-        System.out.println(tes3.isAnagram());
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan kata 1: ");
+        String kata = input.nextLine();
+        System.out.print("Masukkan kata 2: ");
+        String anagram = input.nextLine();
+        AnagramChecker tesInput = new AnagramChecker(kata, anagram);
+        System.out.println(tesInput.isAnagram());
     }
 }
