@@ -25,6 +25,8 @@ package Soal4;
   sekitar 9,78 m/s2, sedangkan di daerah kutub sekitar 9,83 m/s2.
 */
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         KecepatanGerakParabola v1 = new KecepatanGerakParabola(40, 30, 10, 1);
@@ -48,5 +50,20 @@ public class Main {
         System.out.println("Kecepatan di sumbu y = " + v2.hitungKecepatanSumbuY() + " m/s");
         System.out.println("Kecepatan gerak parabola = " + v2.hitungKecepatanGerakParabola() + " m/s");
         System.out.println();
+
+        System.out.println("Perhitungan 3 (User Input)");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kecepatan Awal : ");
+        float kecAwal = input.nextFloat();
+        System.out.print("Sudut          : ");
+        float sudut = input.nextFloat();
+        System.out.print("Gaya Gravitasi : ");
+        float gravitasi = input.nextFloat();
+        System.out.print("Waktu          : ");
+        float waktu = input.nextFloat();
+        KecepatanGerakParabola v3 = new KecepatanGerakParabola(kecAwal, sudut, gravitasi, waktu);
+        System.out.println("Kecepatan di sumbu x = " + v3.hitungKecepatanSumbuX() + " m/s");
+        System.out.println("Kecepatan di sumbu y = " + v3.hitungKecepatanSumbuY() + " m/s");
+        System.out.println("Kecepatan gerak parabola = " + v3.hitungKecepatanGerakParabola() + " m/s");
     }
 }
